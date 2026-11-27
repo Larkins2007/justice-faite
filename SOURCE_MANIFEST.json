@@ -1,0 +1,302 @@
+[
+  {
+    "source": "flat",
+    "path": "404.html",
+    "size": 1290,
+    "sha256": "52659c4f766c5debf4a2bddd92a0e8e18bdc79e1d85d763c3ff4cdc6ce8da2dc"
+  },
+  {
+    "source": "flat",
+    "path": "README.txt",
+    "size": 747,
+    "sha256": "0a8cd33bbcd21276dc95ba95c712d4f8c5114f7b09398d022417f778085f3be7"
+  },
+  {
+    "source": "flat",
+    "path": "anonymous.html",
+    "size": 3350,
+    "sha256": "3e62b9e5791a1fe73f4dda5186e3ba29f8e9456e6133eefacf73c2bd760376ca"
+  },
+  {
+    "source": "flat",
+    "path": "banner_activity.jpg",
+    "size": 260870,
+    "sha256": "c30b55ceed0a9e26d4103e97f677f0d9e2235f78098ce7f74d64b1d1df76ef47"
+  },
+  {
+    "source": "flat",
+    "path": "banner_administration.jpg",
+    "size": 247721,
+    "sha256": "295029e399c7aa2872e28d04dc1ab25630e58e2132ed8b40da01f7a2fbc6621d"
+  },
+  {
+    "source": "flat",
+    "path": "banner_games.jpg",
+    "size": 275029,
+    "sha256": "e50797aa0b56595c8d10f8681607afa83d29e5aa177b12606b8a85a072f7cf17"
+  },
+  {
+    "source": "flat",
+    "path": "banner_info.jpg",
+    "size": 263561,
+    "sha256": "585699edab075998f272e769128449f0aac4b5608bad6fe4f18ab3f8cb3380ab"
+  },
+  {
+    "source": "flat",
+    "path": "banner_navigation.jpg",
+    "size": 293534,
+    "sha256": "665c071c66c54eb1ea6fd9fc8f82e1f6495a5593f016897fac994552c3bef64c"
+  },
+  {
+    "source": "flat",
+    "path": "banner_roles.jpg",
+    "size": 239427,
+    "sha256": "a5cecbd59a6dec10982b7fd5e906d027fdbeb812a412960938d78c50f2ce0c78"
+  },
+  {
+    "source": "flat",
+    "path": "banner_rules.jpg",
+    "size": 242887,
+    "sha256": "b277d151b73a69f9fd02be4a8110e59a9881f51ea3d5d78b843775fa1fd5c73b"
+  },
+  {
+    "source": "flat",
+    "path": "game-rules.html",
+    "size": 5994,
+    "sha256": "ce57500a7f84d49b02ff30a1fecdc4c1151836a898b62b47641693d9d6323fc1"
+  },
+  {
+    "source": "flat",
+    "path": "games.html",
+    "size": 3948,
+    "sha256": "d8e5191a56a6c907eec4bd37a7caa7d5f8554a2eaa26b55d53c6a5caf36446d4"
+  },
+  {
+    "source": "flat",
+    "path": "guide.html",
+    "size": 3663,
+    "sha256": "d3fb155c49a8cb06d0ac0f2e030eef3e530d28aa385ab6c6d04fde9ef052d560"
+  },
+  {
+    "source": "flat",
+    "path": "index.html",
+    "size": 4589,
+    "sha256": "7c3a24881e9f422bdd78c075a7c1eb68dde8b1ca91b30f1734224c73dc9cf357"
+  },
+  {
+    "source": "flat",
+    "path": "join.html",
+    "size": 5465,
+    "sha256": "fa94c6e7f41c6cab9cf9289b15db711f9363e9f2f89925f4e99aca958a90db4c"
+  },
+  {
+    "source": "flat",
+    "path": "main.js",
+    "size": 4542,
+    "sha256": "0cfd6e5d1cff2dc66e952640f749fdc67bc75241814ed10e2ba3fed43315568c"
+  },
+  {
+    "source": "flat",
+    "path": "norm.html",
+    "size": 5513,
+    "sha256": "2ef43f2633217c51e4a8ef6ac28c7e13d89b8c1ddc2486b8258a356eb7abdcda"
+  },
+  {
+    "source": "flat",
+    "path": "purge.html",
+    "size": 342,
+    "sha256": "338f1e5c31065567cb99e55ba91d1d6cc103d7af4bbebc2ccfe4cf9f09a0b180"
+  },
+  {
+    "source": "flat",
+    "path": "rest.html",
+    "size": 5566,
+    "sha256": "62d1974c9f3cd9479f05f8e4347c6247c1d705b0b11aa4cd1eb17597ace0d159"
+  },
+  {
+    "source": "flat",
+    "path": "rules.html",
+    "size": 15037,
+    "sha256": "10558850d6e5104bf13061fc60d68b653611a7bb547c0206802fc445e4d805e1"
+  },
+  {
+    "source": "flat",
+    "path": "style.css",
+    "size": 11368,
+    "sha256": "07dc8db66552bc4429b2251f3da16f58c8a7c0b0d8456570c32831dc14544ed8"
+  },
+  {
+    "source": "flat",
+    "path": "tokens.html",
+    "size": 3567,
+    "sha256": "e597f2a5e3cdf2853759f11964ee834acd5cd247f20c15592f3e9bed776ea5b0"
+  },
+  {
+    "source": "site3",
+    "path": ".eleventy.js",
+    "size": 1944,
+    "sha256": "227ffc58d498e6065043d9885beeee50e2b00b012c798979cd88c7219b360f29"
+  },
+  {
+    "source": "site3",
+    "path": ".gitignore",
+    "size": 78,
+    "sha256": "2eb1181afbc19100fff440a3ff83626e963734696a932012aad4dfb6b0641e47"
+  },
+  {
+    "source": "site3",
+    "path": "README.md",
+    "size": 2261,
+    "sha256": "fa1a97353530947f145b0dd269e2a8ebc2370f4a835cc09343ed2e9260f29645"
+  },
+  {
+    "source": "site3",
+    "path": "package.json",
+    "size": 452,
+    "sha256": "35fa27163e688e472fa523d404ee3580dfae8642eabb9e167392393e4a29de87"
+  },
+  {
+    "source": "site3",
+    "path": "src/404.njk",
+    "size": 845,
+    "sha256": "d0504c489e4294e17761828e9ba667e946810f1ce20eb86905617d2d9b36d938"
+  },
+  {
+    "source": "site3",
+    "path": "src/_data/site.json",
+    "size": 665,
+    "sha256": "c1ffd3711545ce0ebfed625ce372d17b8e387e9f2bc9112eeee2deec8f38edef"
+  },
+  {
+    "source": "site3",
+    "path": "src/_includes/base.njk",
+    "size": 3237,
+    "sha256": "bfd0880a12cf25544e68f597e11058c2b3966ed2c8bfa96d022495f99a88eb07"
+  },
+  {
+    "source": "site3",
+    "path": "src/_includes/page.njk",
+    "size": 1739,
+    "sha256": "6e4126da2fff8b3c4d755f2cfbff7fd09aea06630f51f1b8641359b3d3caec8c"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/css/style.css",
+    "size": 11368,
+    "sha256": "07dc8db66552bc4429b2251f3da16f58c8a7c0b0d8456570c32831dc14544ed8"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_activity.jpg",
+    "size": 260870,
+    "sha256": "c30b55ceed0a9e26d4103e97f677f0d9e2235f78098ce7f74d64b1d1df76ef47"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_administration.jpg",
+    "size": 247721,
+    "sha256": "295029e399c7aa2872e28d04dc1ab25630e58e2132ed8b40da01f7a2fbc6621d"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_games.jpg",
+    "size": 275029,
+    "sha256": "e50797aa0b56595c8d10f8681607afa83d29e5aa177b12606b8a85a072f7cf17"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_info.jpg",
+    "size": 263561,
+    "sha256": "585699edab075998f272e769128449f0aac4b5608bad6fe4f18ab3f8cb3380ab"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_navigation.jpg",
+    "size": 293534,
+    "sha256": "665c071c66c54eb1ea6fd9fc8f82e1f6495a5593f016897fac994552c3bef64c"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_roles.jpg",
+    "size": 239427,
+    "sha256": "a5cecbd59a6dec10982b7fd5e906d027fdbeb812a412960938d78c50f2ce0c78"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/img/banner_rules.jpg",
+    "size": 242887,
+    "sha256": "b277d151b73a69f9fd02be4a8110e59a9881f51ea3d5d78b843775fa1fd5c73b"
+  },
+  {
+    "source": "site3",
+    "path": "src/assets/js/main.js",
+    "size": 4515,
+    "sha256": "0d64ba3c591d2b98c2158f25e7a51266789bfa561a89b3423a38bf3e87350094"
+  },
+  {
+    "source": "site3",
+    "path": "src/index.njk",
+    "size": 3301,
+    "sha256": "d0c5b794dc6f7c490d76f8470381b391ec0035cc0d8314fd2cdbb5ed8cee26ef"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/anonymous.md",
+    "size": 2029,
+    "sha256": "ff0be13334c8f0bbe25b57df1ef97501347a29ad5fce949224088f70a1ecf47d"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/game-rules.md",
+    "size": 9628,
+    "sha256": "d970812fec851dc059b6b08d69f2605e0b6e27b47e85ecf66936b561d78c5b76"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/games.md",
+    "size": 3104,
+    "sha256": "c70d6681d1fe36edb74787f44c666cef0a67039b8b8d8f209750bfc9bd110ae3"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/guide.md",
+    "size": 2043,
+    "sha256": "0fe0f212f362e08270a2d27202c9c7971e75dab2fd34fe62841a27d073374d0a"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/join.md",
+    "size": 2629,
+    "sha256": "35136336531fab35b74008cde13a9f96b3d4b414c2ab03030cc78fb9f3a166cf"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/norm.md",
+    "size": 3121,
+    "sha256": "890bb3d34fd5816dac1142bb368f9a3e99e9a54e5f6c00d1e8d46c00d5c482e7"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/rest.md",
+    "size": 3884,
+    "sha256": "23826252450ff1749fd469b64b82c8a39e95594552cee4e5bfee8b6bbf92beef"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/rules.md",
+    "size": 19795,
+    "sha256": "f0f017f76a4692759858a9d8defdd3bebe46de17f3d3768b7de0000403acac63"
+  },
+  {
+    "source": "site3",
+    "path": "src/pages/tokens.md",
+    "size": 1970,
+    "sha256": "97834683ca9391f2c3a850ff9c49992c7b2634887e7671b4bd20251ecea588aa"
+  },
+  {
+    "source": "site3",
+    "path": "src/purge.njk",
+    "size": 412,
+    "sha256": "1a4597466379496549fa0b67a1b24d635e8142eb225511ae466fba7911f89b19"
+  }
+]
