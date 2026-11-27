@@ -1,4 +1,4 @@
 Justice Faite Site
-Version: 3.2.0-winter-glass
+Version: 3.3.1-winter-glass-fix
 Build date: 2026-11-27
 Format: static HTML, no folders, no build step

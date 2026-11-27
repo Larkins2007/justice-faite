@@ -1,0 +1,549 @@
+{
+  "release": "3.3.1-winter-glass-fix",
+  "date": "2026-11-27",
+  "static_audit": {
+    "result": "PASS",
+    "checks": [
+      "PASS: HTML parse / unique IDs / old anchors: 12 pages",
+      "PASS: Visible text comparison: no text changed or removed; homepage CTA order changed only",
+      "PASS: Internal links and fragments checked",
+      "PASS: Assets: 7 original banners byte-identical; page images resolve",
+      "PASS: Carousel: all 8 previous destinations retained",
+      "PASS: JavaScript syntax: PASS",
+      "PASS: CSS syntax: PASS (229 top-level rules/at-rules)",
+      "PASS: No third-party JS/CSS/font dependencies added",
+      "RESULT: ALL CHECKS PASSED"
+    ]
+  },
+  "browser_audit": {
+    "viewport_checks": {
+      "desktop": {
+        "width": 1440,
+        "height": 1000,
+        "layout": {
+          "viewportWidth": 1440,
+          "documentWidth": 1440,
+          "hero": {
+            "left": 136,
+            "top": 92,
+            "right": 1304,
+            "bottom": 782,
+            "width": 1168,
+            "height": 690
+          },
+          "decoration": {
+            "left": 832.203125,
+            "top": 222,
+            "right": 1262.203125,
+            "bottom": 652,
+            "width": 430,
+            "height": 430
+          },
+          "decorationInsideHero": true,
+          "decorationOverlapsAnyCTA": false,
+          "cardCount": 8,
+          "visibleCards": 5,
+          "theme": "dark"
+        },
+        "console_errors": [],
+        "failed_requests": [],
+        "rules_grid": {
+          "toc": {
+            "left": 1008,
+            "right": 1248,
+            "top": 610.53125,
+            "bottom": 1325.53125,
+            "width": 240
+          },
+          "body": {
+            "left": 192,
+            "right": 988,
+            "width": 796
+          },
+          "heading": {
+            "left": 231,
+            "right": 949,
+            "top": 649.53125,
+            "bottom": 724.5
+          },
+          "columnsSeparated": true,
+          "headingDoesNotIntersectToc": true
+        }
+      },
+      "tablet": {
+        "width": 820,
+        "height": 1180,
+        "layout": {
+          "viewportWidth": 820,
+          "documentWidth": 820,
+          "hero": {
+            "left": 16,
+            "top": 86,
+            "right": 804,
+            "bottom": 776,
+            "width": 788,
+            "height": 690
+          },
+          "decoration": {
+            "left": 463,
+            "top": 267,
+            "right": 791,
+            "bottom": 595,
+            "width": 328,
+            "height": 328
+          },
+          "decorationInsideHero": true,
+          "decorationOverlapsAnyCTA": false,
+          "cardCount": 8,
+          "visibleCards": 4,
+          "theme": "dark"
+        },
+        "console_errors": [],
+        "failed_requests": []
+      },
+      "iphone": {
+        "width": 390,
+        "height": 844,
+        "layout": {
+          "viewportWidth": 390,
+          "documentWidth": 390,
+          "hero": {
+            "left": 13,
+            "top": 77,
+            "right": 377,
+            "bottom": 767,
+            "width": 364,
+            "height": 690
+          },
+          "decoration": {
+            "left": 214,
+            "top": 112.390625,
+            "right": 368,
+            "bottom": 266.390625,
+            "width": 154,
+            "height": 154
+          },
+          "decorationInsideHero": true,
+          "decorationOverlapsAnyCTA": false,
+          "cardCount": 8,
+          "visibleCards": 3,
+          "theme": "dark"
+        },
+        "console_errors": [],
+        "failed_requests": []
+      },
+      "small_iphone": {
+        "width": 320,
+        "height": 740,
+        "layout": {
+          "viewportWidth": 320,
+          "documentWidth": 320,
+          "hero": {
+            "left": 13,
+            "top": 77,
+            "right": 307,
+            "bottom": 705,
+            "width": 294,
+            "height": 628
+          },
+          "decoration": {
+            "left": 168,
+            "top": 103.03125,
+            "right": 300,
+            "bottom": 235.03125,
+            "width": 132,
+            "height": 132
+          },
+          "decorationInsideHero": true,
+          "decorationOverlapsAnyCTA": false,
+          "cardCount": 8,
+          "visibleCards": 3,
+          "theme": "dark"
+        },
+        "console_errors": [],
+        "failed_requests": []
+      }
+    },
+    "interaction_checks": {
+      "desktop": {
+        "start_scroll": 1186,
+        "step_px": 296,
+        "next_scroll": 1482,
+        "prev_scroll": 1186,
+        "keyboard_scroll": 1482,
+        "arrow_next_changes": true,
+        "arrow_prev_restores": true,
+        "keyboard_changes": true,
+        "search_works": true
+      },
+      "tablet": {
+        "start_scroll": 1070,
+        "step_px": 266.88,
+        "next_scroll": 1336,
+        "prev_scroll": 1070,
+        "keyboard_scroll": 1336,
+        "arrow_next_changes": true,
+        "arrow_prev_restores": true,
+        "keyboard_changes": true,
+        "search_works": true
+      },
+      "iphone": {
+        "start_scroll": 682,
+        "step_px": 170.39,
+        "next_scroll": 852,
+        "prev_scroll": 682,
+        "keyboard_scroll": 852,
+        "arrow_next_changes": true,
+        "arrow_prev_restores": true,
+        "keyboard_changes": true,
+        "search_works": true
+      },
+      "mobile_toc": {
+        "expanded": "true",
+        "links_generated": 87,
+        "works": true
+      },
+      "small_iphone": {
+        "start_scroll": 558,
+        "step_px": 139.59,
+        "next_scroll": 698,
+        "prev_scroll": 558,
+        "keyboard_scroll": 698,
+        "arrow_next_changes": true,
+        "arrow_prev_restores": true,
+        "keyboard_changes": true,
+        "search_works": true
+      }
+    },
+    "page_loads": {
+      "404.html": {
+        "title": "404 — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "anonymous.html": {
+        "title": "Обращение к администрации — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "game-rules.html": {
+        "title": "Правила игр — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 2
+      },
+      "games.html": {
+        "title": "Игры — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "guide.html": {
+        "title": "Бот — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "index.html": {
+        "title": "Навигация — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 4
+      },
+      "join.html": {
+        "title": "Как вступить — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "norm.html": {
+        "title": "Норма и чистка — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "purge.html": {
+        "title": "Норма и чистка — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "rest.html": {
+        "title": "Рест — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      },
+      "rules.html": {
+        "title": "Правила сообщества — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 2
+      },
+      "tokens.html": {
+        "title": "Жетоны — Justice Faite",
+        "main_count": 1,
+        "images_loaded": true,
+        "button_count": 1
+      }
+    }
+  },
+  "deep_interaction_audit": {
+    "autoplay": {
+      "start": 1186,
+      "after_6_8s": 1482,
+      "moved": true
+    },
+    "touch_swipe": {
+      "initial": 682,
+      "after_swipe": 852,
+      "moved": true,
+      "viewport": {
+        "x": 13,
+        "y": 340,
+        "width": 364,
+        "height": 244.734375
+      }
+    },
+    "toc_navigation": {
+      "hash_before": "",
+      "hash_after": "#p2",
+      "target_visible": true,
+      "expanded": "true"
+    },
+    "reduced_motion": {
+      "start": 1186,
+      "after_6_6s": 1186,
+      "manual_next": 1482,
+      "autoplay_disabled": true,
+      "manual_control_works": true
+    }
+  },
+  "full_health_audit": {
+    "pages": {
+      "404.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "404 — Justice Faite"
+      },
+      "anonymous.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Обращение к администрации — Justice Faite"
+      },
+      "game-rules.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Правила игр — Justice Faite"
+      },
+      "games.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Игры — Justice Faite"
+      },
+      "guide.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Бот — Justice Faite"
+      },
+      "index.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Навигация — Justice Faite"
+      },
+      "join.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Как вступить — Justice Faite"
+      },
+      "norm.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Норма и чистка — Justice Faite"
+      },
+      "purge.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Норма и чистка — Justice Faite"
+      },
+      "rest.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Рест — Justice Faite"
+      },
+      "rules.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Правила сообщества — Justice Faite"
+      },
+      "tokens.html": {
+        "http": 200,
+        "main": true,
+        "images_loaded": true,
+        "title": "Жетоны — Justice Faite"
+      }
+    },
+    "carousel_navigation": {
+      "join.html": {
+        "main": true,
+        "title": "Как вступить — Justice Faite"
+      },
+      "rules.html": {
+        "main": true,
+        "title": "Правила сообщества — Justice Faite"
+      },
+      "rest.html": {
+        "main": true,
+        "title": "Рест — Justice Faite"
+      },
+      "norm.html": {
+        "main": true,
+        "title": "Норма и чистка — Justice Faite"
+      },
+      "tokens.html": {
+        "main": true,
+        "title": "Жетоны — Justice Faite"
+      },
+      "games.html": {
+        "main": true,
+        "title": "Игры — Justice Faite"
+      },
+      "anonymous.html": {
+        "main": true,
+        "title": "Обращение к администрации — Justice Faite"
+      },
+      "guide.html": {
+        "main": true,
+        "title": "Бот — Justice Faite"
+      }
+    },
+    "summary": {
+      "all_page_http_200": true,
+      "all_pages_have_main": true,
+      "all_page_img_tags_loaded": true,
+      "all_8_cards_navigate": true,
+      "console_errors": [],
+      "failed_requests": []
+    }
+  },
+  "edge_layout_audit": {
+    "rules.html": {
+      "tocWidth": 240,
+      "bodyWidth": 796,
+      "separate": true,
+      "headings": [
+        {
+          "text": "Система предупреждений",
+          "align": "center",
+          "transform": "uppercase",
+          "rect": {
+            "left": 231,
+            "right": 949,
+            "top": 649.53125,
+            "bottom": 724.5
+          }
+        },
+        {
+          "text": "1. Возрастное ограничение",
+          "align": "center",
+          "transform": "uppercase",
+          "rect": {
+            "left": 231,
+            "right": 949,
+            "top": 1151.625,
+            "bottom": 1226.59375
+          }
+        },
+        {
+          "text": "2. Уважение и комфортная атмосфера",
+          "align": "center",
+          "transform": "uppercase",
+          "rect": {
+            "left": 231,
+            "right": 949,
+            "top": 1508.109375,
+            "bottom": 1583.078125
+          }
+        }
+      ],
+      "headingCount": 19,
+      "subheadingCount": 68,
+      "tocLinks": 87
+    },
+    "game-rules.html": {
+      "tocWidth": 240,
+      "bodyWidth": 796,
+      "separate": true,
+      "headings": [
+        {
+          "text": "1. Шпион",
+          "align": "center",
+          "transform": "uppercase",
+          "rect": {
+            "left": 231,
+            "right": 949,
+            "top": 813.828125,
+            "bottom": 888.796875
+          }
+        },
+        {
+          "text": "2. Жених и невеста",
+          "align": "center",
+          "transform": "uppercase",
+          "rect": {
+            "left": 231,
+            "right": 949,
+            "top": 1514.640625,
+            "bottom": 1589.609375
+          }
+        },
+        {
+          "text": "3. Правда или ложь",
+          "align": "center",
+          "transform": "uppercase",
+          "rect": {
+            "left": 231,
+            "right": 949,
+            "top": 2188.578125,
+            "bottom": 2263.546875
+          }
+        }
+      ],
+      "headingCount": 8,
+      "subheadingCount": 49,
+      "tocLinks": 57
+    },
+    "theme_persistence": {
+      "stored": "light",
+      "applied": "light"
+    }
+  },
+  "conclusion": {
+    "all_12_html_pages_opened": true,
+    "no_page_horizontal_overflow": true,
+    "carousel_buttons_work": true,
+    "touch_swipe_works": true,
+    "autoplay_works": true,
+    "reduced_motion_respected": true,
+    "mobile_toc_works": true,
+    "all_eight_carousel_cards_navigate": true,
+    "all_pages_http_200_and_images_loaded": true,
+    "toc_and_content_columns_separated_on_both_rules_pages": true,
+    "theme_preference_persists": true,
+    "browser_console_errors": 0,
+    "failed_resource_requests": 0
+  }
+}

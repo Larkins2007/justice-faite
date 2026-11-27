@@ -2,7 +2,7 @@
   "use strict";
   const root = document.documentElement;
   const colorScheme = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
-  let themePreference = "system";
+  let themePreference = "dark";
   try {
     const stored = localStorage.getItem("jf-theme");
     if (stored === "light" || stored === "dark" || stored === "system") themePreference = stored;
@@ -35,8 +35,10 @@
   if (carousel) {
     const viewport = carousel.querySelector(".carousel-viewport");
     const track = carousel.querySelector("[data-carousel-track]");
-    const prevButton = carousel.querySelector("[data-carousel-prev]");
-    const nextButton = carousel.querySelector("[data-carousel-next]");
+    // Controls are siblings of .carousel, inside .nav-grid, not descendants of it.
+    const controlScope = carousel.closest(".nav-grid") || carousel.parentElement || document;
+    const prevButton = controlScope.querySelector("[data-carousel-prev]");
+    const nextButton = controlScope.querySelector("[data-carousel-next]");
     const originalCards = Array.from(track ? track.children : []);
     const cloneCount = Math.min(4, originalCards.length);
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -58,7 +60,6 @@
 
       let position = cloneCount;
       let pauseUntil = 0;
-      let autoMove = false;
       let settleTimer = 0;
       let autoTimer = 0;
 
@@ -75,12 +76,10 @@
         position = nextPosition;
         requestAnimationFrame(() => { viewport.style.scrollBehavior = previous; });
       };
-      const move = (delta, automatic = false) => {
+      const move = (delta) => {
         const nextPosition = position + delta;
-        autoMove = automatic;
         position = nextPosition;
         viewport.scrollTo({ left: nextPosition * getStep(), behavior: reducedMotion ? "auto" : "smooth" });
-        if (automatic) window.setTimeout(() => { autoMove = false; }, 1400);
       };
       const settle = () => {
         const step = getStep();
@@ -99,24 +98,38 @@
         window.clearTimeout(settleTimer);
         settleTimer = window.setTimeout(() => {
           settle();
-          if (!autoMove) pauseUntil = Date.now() + 8500;
         }, 140);
       }, { passive: true });
       viewport.addEventListener("pointerdown", () => { pauseUntil = Date.now() + 8500; }, { passive: true });
       viewport.addEventListener("touchstart", () => { pauseUntil = Date.now() + 8500; }, { passive: true });
-      carousel.addEventListener("mouseenter", () => { pauseUntil = Number.MAX_SAFE_INTEGER; });
-      carousel.addEventListener("mouseleave", () => { pauseUntil = Date.now() + 2800; });
-      carousel.addEventListener("focusin", () => { pauseUntil = Date.now() + 8500; });
-      carousel.addEventListener("focusout", () => { pauseUntil = Date.now() + 5000; });
+      viewport.addEventListener("wheel", () => { pauseUntil = Date.now() + 8500; }, { passive: true });
+      const interactionRoot = carousel.closest(".nav-grid") || carousel;
+      interactionRoot.addEventListener("mouseenter", () => { pauseUntil = Number.MAX_SAFE_INTEGER; });
+      interactionRoot.addEventListener("mouseleave", () => { pauseUntil = Date.now() + 2800; });
+      interactionRoot.addEventListener("focusin", () => { pauseUntil = Date.now() + 8500; });
+      interactionRoot.addEventListener("focusout", () => { pauseUntil = Date.now() + 5000; });
 
-      if (prevButton) prevButton.addEventListener("click", () => { pauseUntil = Date.now() + 8500; move(-1); });
-      if (nextButton) nextButton.addEventListener("click", () => { pauseUntil = Date.now() + 8500; move(1); });
+      if (prevButton) prevButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        pauseUntil = Date.now() + 8500;
+        move(-1);
+      });
+      if (nextButton) nextButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        pauseUntil = Date.now() + 8500;
+        move(1);
+      });
+      // Keyboard navigation works when the carousel viewport has focus.
+      viewport.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") { event.preventDefault(); pauseUntil = Date.now() + 8500; move(-1); }
+        if (event.key === "ArrowRight") { event.preventDefault(); pauseUntil = Date.now() + 8500; move(1); }
+      });
 
       if (!reducedMotion) {
         autoTimer = window.setInterval(() => {
           if (document.visibilityState !== "visible") return;
           if (Date.now() < pauseUntil) return;
-          move(1, true);
+          move(1);
         }, 6200);
       }
       window.addEventListener("resize", () => {
