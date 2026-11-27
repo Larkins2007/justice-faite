@@ -1,4 +1,3 @@
-Justice Faite Site
-Version: 3.3.1-winter-glass-fix
-Build date: 2026-11-27
-Format: static HTML, no folders, no build step
+Justice Faite Website 3.4.0
+Winter Glass · Seven Banners · Bot + Tokens Unified
+27 November 2026

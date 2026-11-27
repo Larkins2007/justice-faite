@@ -1,0 +1,20 @@
+Justice Faite Website 3.4.0 — 27 November 2026
+
+- Replaced all seven legacy navigation illustrations with the seven newly generated 16:9 banners.
+- Homepage now has exactly seven navigation cards; bot and tokens share one section.
+- Added a prominent homepage announcements/update panel.
+- Rebuilt the anonymous administration contact page around the separate anonymous Telegram bot; removed false claims that the contact is identifiable and removed the application-bot link from that page.
+- Corrected the main Justice Faite Manager bot link to @justice_faite_bot on the bot/economy page. The application bot @Justicefaitebot remains only where applications are actually submitted.
+- Merged tokens information and verified economy commands into the bot page; old tokens.html URLs redirect to the combined section.
+- Removed the obsolete "Старые адреса" block from the norms page.
+- Made the full game-rules destination visually prominent.
+- Added a consistent return-to-sections link and upgraded related-page navigation.
+- Rule numbers and their explanations now read on the same line while preserving heading IDs for the table of contents.
+- Improved theme toggle alignment, changed it to a clear two-state light/dark switch, and substantially rebuilt the light palette.
+- Increased carousel auto-advance speed and improved mobile snow animation and 16:9 banner display.
+
+Important known limitation: the anonymous bot's exact public username/link was not present in the available project materials. The page therefore explains the anonymous flow without inventing a Telegram address. Add the confirmed URL when available.
+
+No bot code, application data, GitHub repository, Cloudflare Worker, or production deployment was modified.
+
+Follow-up polish: fixed banner/back-link structure, made bot capability cards informational, and removed application-bot shortcuts from the anonymous-contact page.
