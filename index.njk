@@ -1,0 +1,73 @@
+---
+layout: base.njk
+title: Навигация
+description: Официальная библиотека Justice Faite. Правила, рест, норма, игры и как вступить — по ссылкам из Telegram.
+ogImage: /img/banner_navigation.jpg
+---
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">COMMUNITY · 16+</p>
+    <h1 class="hero-title">{{ site.name }}</h1>
+    <p class="hero-lead">Библиотека страниц для постов. Открой нужную тему — ответ на первом экране.</p>
+    <div class="hero-actions">
+      <a href="{{ site.channel }}" class="btn btn-primary" rel="noopener" target="_blank">В канал</a>
+      <a href="{{ site.joinBot }}" class="btn btn-secondary" rel="noopener" target="_blank">Вступить</a>
+    </div>
+  </div>
+</section>
+
+<section class="nav-grid" aria-label="Темы">
+  <h2 class="section-title">Я хочу…</h2>
+  <div class="cards">
+    <a href="/join/" class="card card-join">
+      <span class="card-icon">🚪</span>
+      <span class="card-title">Как вступить</span>
+      <span class="card-desc">Возраст 16+, документ, заявка</span>
+    </a>
+    <a href="/rules/" class="card">
+      <span class="card-icon">📖</span>
+      <span class="card-title">Правила</span>
+      <span class="card-desc">Полный свод с якорями</span>
+    </a>
+    <a href="/rest/" class="card">
+      <span class="card-icon">⏸</span>
+      <span class="card-title">Рест</span>
+      <span class="card-desc">Официальная пауза без чистки</span>
+    </a>
+    <a href="/norm/" class="card">
+      <span class="card-icon">📊</span>
+      <span class="card-title">Норма и чистка</span>
+      <span class="card-desc">90 / 80 / 70 и воскресенье 18:00</span>
+    </a>
+    <a href="/tokens/" class="card">
+      <span class="card-icon">🪙</span>
+      <span class="card-title">Жетоны</span>
+      <span class="card-desc">Валюта бота и команды</span>
+    </a>
+    <a href="/games/" class="card">
+      <span class="card-icon">🎲</span>
+      <span class="card-title">Игры</span>
+      <span class="card-desc">Список и правила</span>
+    </a>
+    <a href="/anonymous/" class="card">
+      <span class="card-icon">✉️</span>
+      <span class="card-title">Обращение к администрации</span>
+      <span class="card-desc">Через бота</span>
+    </a>
+    <a href="/guide/" class="card">
+      <span class="card-icon">🤖</span>
+      <span class="card-title">Бот</span>
+      <span class="card-desc">Рест, жетоны, обращения</span>
+    </a>
+  </div>
+</section>
+
+<section class="search-section">
+  <h2 class="section-title">Поиск</h2>
+  <form class="search-form" role="search" id="site-search">
+    <label for="q" class="visually-hidden">Поиск по сайту</label>
+    <input type="search" id="q" name="q" placeholder="рест, норма, стикеры…" autocomplete="off" enterkeyhint="search">
+    <button type="submit" class="btn btn-primary">Найти</button>
+  </form>
+  <div id="search-results" class="search-results" hidden></div>
+</section>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{% if title %}{{ title }} — {{ site.name }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  {% if site.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% if ogImage %}
+  <meta property="og:image" content="{{ site.url }}{{ ogImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}/img/banner_navigation.jpg">
+  {% endif %}
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="{{ site.name }} — на главную">
+        <span class="logo-mark">JF</span>
+        <span class="logo-text">{{ site.name }}</span>
+      </a>
+      <nav class="header-nav" aria-label="Основные действия">
+        <button type="button" class="btn-icon" id="theme-toggle" aria-label="Переключить тему" title="Тема">
+          <span class="icon-sun" aria-hidden="true">☀</span>
+          <span class="icon-moon" aria-hidden="true">☾</span>
+        </button>
+        <a href="{{ site.channel }}" class="btn btn-channel" rel="noopener" target="_blank">В канал</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">{{ site.footer }}</p>
+      <nav class="footer-links">
+        <a href="{{ site.channel }}" rel="noopener" target="_blank">Канал</a>
+        <a href="{{ site.joinBot }}" rel="noopener" target="_blank">Вступить</a>
+        <a href="/">Навигация</a>
+      </nav>
+      <p class="footer-note">Сайт — единственный актуальный источник правил. Редакция от {{ updated or "2026-11-27" }}.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
