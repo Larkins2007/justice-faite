@@ -1,19 +1,132 @@
 (function () {
   "use strict";
   const root = document.documentElement;
+  const colorScheme = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+  let themePreference = "system";
   try {
     const stored = localStorage.getItem("jf-theme");
-    if (stored) root.setAttribute("data-theme", stored);
+    if (stored === "light" || stored === "dark" || stored === "system") themePreference = stored;
   } catch (_) { /* Storage can be unavailable in private browsing. */ }
+
+  const applyTheme = (preference) => {
+    themePreference = preference;
+    const effectiveTheme = preference === "system" ? (colorScheme && colorScheme.matches ? "light" : "dark") : preference;
+    root.setAttribute("data-theme", effectiveTheme);
+  };
+  applyTheme(themePreference);
+  if (colorScheme && colorScheme.addEventListener) {
+    colorScheme.addEventListener("change", () => {
+      if (themePreference === "system") applyTheme("system");
+    });
+  }
 
   const toggle = document.getElementById("theme-toggle");
   if (toggle) {
     toggle.addEventListener("click", () => {
-      const current = root.getAttribute("data-theme");
-      const next = current === "light" ? "dark" : current === "dark" ? "system" : "light";
-      root.setAttribute("data-theme", next);
+      const next = themePreference === "light" ? "dark" : themePreference === "dark" ? "system" : "light";
+      applyTheme(next);
       try { localStorage.setItem("jf-theme", next); } catch (_) { /* Theme still works for this page. */ }
     });
+  }
+
+
+  // Responsive infinite carousel. Original links remain the only interactive cards.
+  const carousel = document.querySelector("[data-carousel]");
+  if (carousel) {
+    const viewport = carousel.querySelector(".carousel-viewport");
+    const track = carousel.querySelector("[data-carousel-track]");
+    const prevButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
+    const originalCards = Array.from(track ? track.children : []);
+    const cloneCount = Math.min(4, originalCards.length);
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (viewport && track && originalCards.length > 1) {
+      const cloneCard = (card) => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        clone.setAttribute("data-carousel-clone", "");
+        clone.inert = true;
+        clone.style.pointerEvents = "none";
+        clone.querySelectorAll("a, button, input, [tabindex]").forEach((item) => item.tabIndex = -1);
+        return clone;
+      };
+      const leadingClones = originalCards.slice(-cloneCount).map(cloneCard);
+      const trailingClones = originalCards.slice(0, cloneCount).map(cloneCard);
+      leadingClones.forEach((card) => track.insertBefore(card, track.firstChild));
+      trailingClones.forEach((card) => track.appendChild(card));
+
+      let position = cloneCount;
+      let pauseUntil = 0;
+      let autoMove = false;
+      let settleTimer = 0;
+      let autoTimer = 0;
+
+      const getStep = () => {
+        const card = track.children[cloneCount];
+        if (!card) return 1;
+        const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+        return card.getBoundingClientRect().width + gap;
+      };
+      const setPositionInstantly = (nextPosition) => {
+        const previous = viewport.style.scrollBehavior;
+        viewport.style.scrollBehavior = "auto";
+        viewport.scrollLeft = nextPosition * getStep();
+        position = nextPosition;
+        requestAnimationFrame(() => { viewport.style.scrollBehavior = previous; });
+      };
+      const move = (delta, automatic = false) => {
+        const nextPosition = position + delta;
+        autoMove = automatic;
+        position = nextPosition;
+        viewport.scrollTo({ left: nextPosition * getStep(), behavior: reducedMotion ? "auto" : "smooth" });
+        if (automatic) window.setTimeout(() => { autoMove = false; }, 1400);
+      };
+      const settle = () => {
+        const step = getStep();
+        if (!step) return;
+        const actualPosition = Math.round(viewport.scrollLeft / step);
+        position = actualPosition;
+        if (position >= cloneCount + originalCards.length) {
+          setPositionInstantly(position - originalCards.length);
+        } else if (position < cloneCount) {
+          setPositionInstantly(position + originalCards.length);
+        }
+      };
+
+      requestAnimationFrame(() => setPositionInstantly(cloneCount));
+      viewport.addEventListener("scroll", () => {
+        window.clearTimeout(settleTimer);
+        settleTimer = window.setTimeout(() => {
+          settle();
+          if (!autoMove) pauseUntil = Date.now() + 8500;
+        }, 140);
+      }, { passive: true });
+      viewport.addEventListener("pointerdown", () => { pauseUntil = Date.now() + 8500; }, { passive: true });
+      viewport.addEventListener("touchstart", () => { pauseUntil = Date.now() + 8500; }, { passive: true });
+      carousel.addEventListener("mouseenter", () => { pauseUntil = Number.MAX_SAFE_INTEGER; });
+      carousel.addEventListener("mouseleave", () => { pauseUntil = Date.now() + 2800; });
+      carousel.addEventListener("focusin", () => { pauseUntil = Date.now() + 8500; });
+      carousel.addEventListener("focusout", () => { pauseUntil = Date.now() + 5000; });
+
+      if (prevButton) prevButton.addEventListener("click", () => { pauseUntil = Date.now() + 8500; move(-1); });
+      if (nextButton) nextButton.addEventListener("click", () => { pauseUntil = Date.now() + 8500; move(1); });
+
+      if (!reducedMotion) {
+        autoTimer = window.setInterval(() => {
+          if (document.visibilityState !== "visible") return;
+          if (Date.now() < pauseUntil) return;
+          move(1, true);
+        }, 6200);
+      }
+      window.addEventListener("resize", () => {
+        window.clearTimeout(settleTimer);
+        window.setTimeout(() => setPositionInstantly(position), 120);
+      }, { passive: true });
+      window.addEventListener("pagehide", () => {
+        if (autoTimer) window.clearInterval(autoTimer);
+      }, { once: true });
+    }
   }
 
   const tocNav = document.querySelector(".toc");
