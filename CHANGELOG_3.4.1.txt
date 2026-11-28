@@ -1,0 +1,14 @@
+Justice Faite Website 3.4.1 — Command Library
+28 November 2026
+
+Added
+- New commands.html reference page with command explanations, category filters, search and copy-to-clipboard controls.
+- Public command categories: profile, birthdays/rest, clans/circles, notes/bookmarks, social connections, reputation, statistics, tokens/economy, pets/home and free raffles.
+- New home navigation card linking to the command reference.
+- Search index entry for the command reference.
+- Link to the command reference from the existing bot and tokens guide.
+
+Scope
+- No game commands, moderation commands, owner/admin controls or admin-contact section added.
+- The catalog is informational only; commands are copied and used in Telegram. It does not execute bot actions from the website.
+- All command descriptions and trigger examples were checked against the uploaded bot source registry and relevant modules. The catalog is a curated participant-facing subset, not a full command dump.

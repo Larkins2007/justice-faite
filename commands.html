@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Команды — Justice Faite</title>
+  <meta name="description" content="Справочник пользовательских команд Justice Faite: что они делают и как их скопировать для использования во флуде.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Justice Faite">
+  <meta property="og:title" content="Команды Justice Faite">
+  <meta property="og:description" content="Команды, объяснения и быстрое копирование.">
+  <meta property="og:image" content="banner_bot.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%235eead4%22%2F%3E%3Cpath%20d%3D%22M45%2025H27v50h18M70%2025H55v50%22%20fill%3D%22none%22%20stroke%3D%22%230b1410%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Justice Faite — на главную"><span class="logo-mark">JF</span><span class="logo-text">Justice Faite</span></a>
+      <nav class="header-nav" aria-label="Основные действия">
+        <button type="button" class="btn-icon" id="theme-toggle" aria-label="Переключить тему" title="Тема">
+          <span class="icon-sun" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></span><span class="icon-moon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.7 8.7 0 1 0 20.5 15.5Z"/></svg></span>
+        </button>
+        <a href="https://t.me/Justice_faite" class="btn btn-channel" rel="noopener" target="_blank">В канал</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <article class="page-topic commands-topic" data-slug="commands">
+      <div class="page-banner" style="--banner: url('banner_bot.png')"><div class="page-banner-overlay"></div></div>
+      <a class="page-back" href="index.html"><span aria-hidden="true">←</span> Все разделы</a>
+      <header class="page-header"><p class="eyebrow">BOT · COMMAND LIBRARY</p><h1 class="page-title">Команды Justice Faite</h1><p class="page-meta">Справочник · Команды отправляются в основной флуд</p></header>
+      <section class="block-short" aria-label="Как пользоваться"><p>Найди нужную команду, прочитай описание и нажми <strong>«Копировать»</strong>. Если в команде есть фрагмент в квадратных скобках, замени его своими данными перед отправкой. Большинство команд вводится обычным текстом во флуде; <code>/jf_birthdays</code> используй в личном чате с ботом.</p></section>
+      <section class="commands-library page-body" aria-label="Список команд">
+        <div class="commands-search-wrap">
+          <label class="visually-hidden" for="commands-search">Поиск команды</label>
+          <input id="commands-search" type="search" placeholder="Поиск по названию, команде или описанию…" autocomplete="off">
+          <p class="commands-count" id="commands-count" aria-live="polite"></p>
+        </div>
+        <div class="commands-filter" id="commands-filter" aria-label="Категории команд"></div>
+        <div class="commands-groups" id="commands-list"></div>
+        <div class="commands-empty" id="commands-empty" hidden>По этому запросу ничего не найдено. Попробуй другое слово.</div>
+      </section>
+      <section class="related" aria-label="См. также"><h2>См. также</h2><ul class="related-list"><li><a href="guide.html">Бот и жетоны</a></li><li><a href="rest.html">Рест</a></li><li><a href="index.html">Главная</a></li></ul></section>
+      <section class="page-actions"><a href="https://t.me/Justice_faite" class="btn btn-primary" rel="noopener" target="_blank">Открыть флуд</a><a href="guide.html" class="btn btn-secondary">О боте и жетонах</a><a href="index.html" class="btn btn-ghost">Все темы</a></section>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="footer-brand">Justice Faite · 16+</p><nav class="footer-links"><a href="https://t.me/Justice_faite" rel="noopener" target="_blank">Флуд</a><a href="https://t.me/justice_faite_bot" rel="noopener" target="_blank">Бот</a><a href="index.html">Навигация</a></nav><p class="footer-note">Справочник команд. Команды и их доступность могут меняться в боте.</p></div></footer>
+  <div class="commands-toast" id="commands-toast" role="status" aria-live="polite"></div>
+  <script src="main.js" defer></script>
+  <script src="commands.js" defer></script>
+</body>
+</html>

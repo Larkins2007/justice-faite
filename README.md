@@ -42,3 +42,7 @@
 ## Version 3.3 Winter Glass Fix
 
 Исправлены обработчики стрелок карусели, выравнивание зимнего декора на телефонах, стартовая цветовая тема и визуальная иерархия заголовков. Подробности — в `DESIGN_CHANGELOG.txt` и `AUDIT_REPORT.md`.
+
+## Version 3.4.1 — Command Library
+
+Added `commands.html` and `commands.js`: a participant-facing command reference with category filters, search, descriptions and copy buttons. The page is linked from the home carousel, from the bot guide, and from the home search index. This is a static reference; users copy commands and run them in Telegram. Game, moderation and owner/admin commands are excluded.

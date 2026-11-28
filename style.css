@@ -898,3 +898,31 @@ body::before {will-change:background-position,transform;transform:translate3d(0,
 .bot-features .bot-card strong {color:var(--accent);font-size:1rem;}
 .bot-features .bot-card span {color:var(--text-muted);font-size:.88rem;line-height:1.55;}
 [data-theme="light"] .bot-features .bot-card strong {color:#176b49;}
+
+/* Command reference: searchable, copyable catalog */
+.commands-library { padding:clamp(16px,3vw,30px); }
+.commands-search-wrap { display:flex; flex-direction:column; gap:9px; }
+.commands-search-wrap input { width:100%; min-height:50px; padding:12px 15px; border:1px solid var(--border-strong); border-radius:15px; color:var(--text); background:rgba(4,17,11,.32); font:inherit; font-size:1rem; outline:none; }
+[data-theme="light"] .commands-search-wrap input { background:rgba(255,255,255,.82); }
+.commands-search-wrap input:focus-visible { border-color:var(--accent); box-shadow:0 0 0 3px rgba(141,217,177,.15); }
+.commands-count { margin:0; color:var(--text-muted); font-size:.82rem; }
+.commands-filter { display:flex; flex-wrap:wrap; gap:8px; margin:17px 0 22px; }
+.commands-chip { min-height:39px; padding:8px 13px; border:1px solid var(--border); border-radius:999px; color:var(--text-muted); background:rgba(255,255,255,.035); font:inherit; font-size:.83rem; font-weight:700; cursor:pointer; transition:background .18s ease,border-color .18s ease,color .18s ease; }
+.commands-chip:hover { border-color:var(--border-strong); color:var(--text); }
+.commands-chip.is-active { color:#08160f; background:linear-gradient(135deg,#c7f0d7,#8dd9b1); border-color:rgba(230,255,238,.55); }
+.commands-group { margin:24px 0 0; }
+.commands-group h2 { margin:0 0 13px; padding:11px 13px; border:1px solid var(--border); border-radius:14px; color:var(--text); background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018)); font-size:1rem; font-weight:800; letter-spacing:.025em; }
+.commands-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
+.command-card { min-width:0; padding:15px; border:1px solid var(--border); border-radius:17px; color:var(--text); background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02)),var(--bg-card); box-shadow:inset 0 1px 0 rgba(255,255,255,.07); }
+.command-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.command-card h3 { margin:0; font-size:.97rem; line-height:1.35; }
+.command-copy { flex:0 0 auto; min-height:34px; padding:7px 11px; border:1px solid var(--border-strong); border-radius:11px; color:var(--text); background:rgba(255,255,255,.06); font:inherit; font-size:.77rem; font-weight:750; cursor:pointer; }
+.command-copy:hover { border-color:var(--accent); background:rgba(143,218,176,.12); }
+.command-code { display:block; white-space:pre-wrap; overflow-wrap:anywhere; margin:11px 0 9px; padding:10px 12px; border:1px solid rgba(164,232,196,.22); border-radius:12px; color:var(--accent); background:rgba(0,0,0,.14); font-size:.86rem; line-height:1.5; }
+[data-theme="light"] .command-code { background:rgba(255,255,255,.58); }
+.command-card p { margin:0; color:var(--text-muted); font-size:.85rem; line-height:1.5; }
+.commands-empty { margin:18px 0 0; padding:18px; border:1px dashed var(--border-strong); border-radius:15px; color:var(--text-muted); text-align:center; }
+.commands-toast { position:fixed; z-index:1000; left:50%; bottom:calc(18px + env(safe-area-inset-bottom)); transform:translate(-50%,18px); opacity:0; pointer-events:none; padding:12px 17px; border:1px solid var(--border-strong); border-radius:14px; color:var(--text); background:var(--bg-elevated); box-shadow:var(--glass-shadow); font-size:.88rem; font-weight:750; transition:opacity .2s ease,transform .2s ease; }
+.commands-toast.is-visible { opacity:1; transform:translate(-50%,0); }
+@media (max-width:680px) { .commands-cards { grid-template-columns:1fr; } .commands-library { padding:16px 13px; } .commands-filter { gap:7px; } .commands-chip { min-height:36px; padding:7px 11px; font-size:.78rem; } .command-card { padding:13px; } }
+@media (prefers-reduced-motion:reduce) { .commands-toast { transition:none; } }
